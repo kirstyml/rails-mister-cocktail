@@ -6,6 +6,12 @@
     flex: 1 1 auto;
   }
   a {
-
+    color: $bittersweet;
+    font-size: 24px;
   }
+}
+
+.ingredient-list {
+  background-color: $white;
+  padding: 20px;
 }
