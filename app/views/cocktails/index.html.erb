@@ -9,7 +9,11 @@
     <%= link_to cocktail_path(cocktail) do %>
       <div class="card">
           <div class="card-hover">
-            <%= image_tag "orange_cocktail.jpg" %>
+            <% if cocktail.photo.file %>
+              <%= cl_image_tag cocktail.photo, crop: :fill %>
+            <% else %>
+              <%= cl_image_tag("gin_cocktail.jpg") %>
+            <% end %>
           </div>
         <p><%= cocktail.name %></p>
       </div>
